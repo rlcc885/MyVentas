@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/05/2015 10:23:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hbm.Customer" table="customer" catalog="test">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" not-null="true" />
+        </property>
+        <set name="orders" table="order" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_customer" not-null="true" />
+            </key>
+            <one-to-many class="hbm.Order" />
+        </set>
+        <set name="payments" table="payment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_customer" not-null="true" />
+            </key>
+            <one-to-many class="hbm.Payment" />
+        </set>
+    </class>
+</hibernate-mapping>

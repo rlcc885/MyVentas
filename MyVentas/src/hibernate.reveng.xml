@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<!--  -->
+	<table-filter match-name="order" match-catalog="test"></table-filter>
+	<table-filter match-name="payment" match-catalog="test"></table-filter>
+	<table-filter match-name="product" match-catalog="test"></table-filter>
+	<table-filter match-name="customer" match-catalog="test"></table-filter>
+	<table-filter match-name="debt_detail_by_customer" match-catalog="test"></table-filter>
+	<table-filter match-name="payments_by_customer" match-catalog="test"></table-filter>
+	<!--  -->
+</hibernate-reverse-engineering>

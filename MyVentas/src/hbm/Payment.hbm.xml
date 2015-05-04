@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/05/2015 10:23:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hbm.Payment" table="payment" catalog="test">
+        <composite-id name="id" class="hbm.PaymentId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="idCustomer" type="int">
+                <column name="id_customer" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="customer" class="hbm.Customer" update="false" insert="false" fetch="select">
+            <column name="id_customer" not-null="true" />
+        </many-to-one>
+        <property name="paymentDate" type="timestamp">
+            <column name="payment_date" length="19" not-null="true" />
+        </property>
+        <property name="amount" type="double">
+            <column name="amount" precision="3" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

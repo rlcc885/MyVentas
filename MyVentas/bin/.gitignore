@@ -1,0 +1,12 @@
+/assets/
+/controller/
+/entities/
+/hbm/
+/hibernate-mysql.cfg.xml
+/hibernate-sqlite.cfg.xml
+/hibernate.cfg.xml
+/hibernate.reveng.xml
+/index.html
+/org/
+/tables/
+/ui/

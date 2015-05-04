@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="">
+  <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+  <property name="hibernate.connection.url">jdbc:sqlite:venta.db3</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.connection.datasource">venta</property>
+  <property name="hibernate.default_catalog">venta</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+  <mapping class="hbm.dto.Product"/>
+  <mapping class="hbm.dto.DebtDetailByCustomer"/>
+  <mapping class="hbm.dto.Order"/>
+  <mapping class="hbm.dto.PaymentsByCustomer"/>
+  <mapping class="hbm.dto.OrderDetail"/>
+  <mapping class="hbm.dto.Customer"/>
+  <mapping class="hbm.dto.Payment"/>
+ </session-factory>
+</hibernate-configuration>

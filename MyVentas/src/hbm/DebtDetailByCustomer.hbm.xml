@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/05/2015 10:23:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="hbm.DebtDetailByCustomer" table="debt_detail_by_customer" catalog="test">
+        <composite-id name="id" class="hbm.DebtDetailByCustomerId">
+            <key-property name="idProduct" type="int">
+                <column name="id_product" />
+            </key-property>
+            <key-property name="productName" type="string">
+                <column name="product_name" length="50" />
+            </key-property>
+            <key-property name="price" type="double">
+                <column name="price" precision="3" />
+            </key-property>
+            <key-property name="fullPrice" type="double">
+                <column name="full_price" precision="3" />
+            </key-property>
+            <key-property name="quantity" type="int">
+                <column name="quantity" />
+            </key-property>
+            <key-property name="orderDate" type="timestamp">
+                <column name="order_date" length="19" />
+            </key-property>
+            <key-property name="comment" type="string">
+                <column name="comment" length="50" />
+            </key-property>
+            <key-property name="customerName" type="string">
+                <column name="customer_name" length="100" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" length="50" />
+            </key-property>
+            <key-property name="idCustomer" type="int">
+                <column name="id_customer" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
